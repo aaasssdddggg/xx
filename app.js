@@ -43,7 +43,7 @@ function startKeepAlive() {
 
 function sendEmail() {
   cron.schedule('0 0 22 * * *', () => {
- //  items.getitems();
+  items.getitems();
     console.log('running a task every minute at the 5th second');
   });
 }
