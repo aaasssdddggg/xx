@@ -35,15 +35,7 @@ function startKeepAlive() {
           port: 80,
           path: '/'
       };
-      http.get(options, function(res) {
-        res.on('data', function() {
-            try {
-              
-            } catch (err) {
-                console.log(err.message);
-            }
-        });
-      }).on('error', function(err) {
+      http.get(options, function(res) {}).on('error', function(err) {
           console.log("Error: " + err.message);
       });
   }, 1 * 60 * 1000);
@@ -51,7 +43,7 @@ function startKeepAlive() {
 
 function sendEmail() {
   cron.schedule('*/2 * * * *', () => {
-    items.getitems();
+ //   items.getitems();
     console.log('running a task every minute at the 5th second');
   });
 }
