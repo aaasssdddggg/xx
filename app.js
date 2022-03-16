@@ -24,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.listen(process.env.PORT || 3000, () => {
   console.log("We've now got a server!");
 startKeepAlive();
+  sendEmail()
 
 });
 
@@ -37,7 +38,7 @@ function startKeepAlive() {
       http.get(options, function(res) {
         res.on('data', function() {
             try {
-              sendEmail()
+              
             } catch (err) {
                 console.log(err.message);
             }
