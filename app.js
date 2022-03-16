@@ -30,7 +30,7 @@ startKeepAlive();
 function startKeepAlive() {
   setInterval(function() {
       var options = {
-          host: 'app-name.herokuapp.com',
+          host: 'testfarah.herokuapp.com',
           port: 80,
           path: '/'
       };
