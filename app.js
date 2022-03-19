@@ -38,7 +38,7 @@ function startKeepAlive() {
 
 function sendEmail() {
   // runs at 6 pm
-  cron.schedule('0 0 22 * * *', () => {
+  cron.schedule('07 01 * * *', () => {
     items.getitems();
   });
 }
