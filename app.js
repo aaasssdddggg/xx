@@ -18,7 +18,7 @@ function startKeepAlive() {
 
   setInterval(function() {
       var options = {
-          host: 'testfarah.herokuapp.com',
+          host: 'goodenoughscheduler.herokuapp.com',
           port: 80,
           path: '/'
       };
@@ -37,8 +37,8 @@ function startKeepAlive() {
 }
 
 function sendEmail() {
-  // runs at 6 pm
-  cron.schedule('0 50 23 * * *', () => {
-  //  items.getitems();
+  // runs at 6 pm NJ time , 22 on server time 
+  cron.schedule('0 0 22 * * *', () => {
+    items.getitems();
   });
 }
